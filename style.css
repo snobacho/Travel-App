@@ -14,7 +14,7 @@ html {
     --white-color: #fff;
     --gray-color: #555;
     --light-gray:#777;
-    --aqua-color: rgb(31, 209, 209);
+    --aqua-color: rgb(9, 185, 197);
     --aqua-light-color: rgb(28, 172, 172);
     --pink-color: rgb(229, 182, 223);
 
@@ -24,7 +24,7 @@ html {
     align-items: center;
     justify-content: center;
 }
-
+/*       ***                 end global styles  */
 .container {
     background-color: var(--secondary-color);
     margin: 3.5rem;
@@ -34,7 +34,7 @@ html {
 .header {
     width: 100%;
     height: calc(100vh - 7rem);
-    background:  url(./images/header-bg.jpg) center no-repeat;
+    background:  url("./images/header-bg.jpg") center no-repeat;
     background-size: cover;
     position: relative;
     perspective: 100rem;
@@ -47,10 +47,10 @@ html {
 }
 .heading {
     font-size: 8rem;
-    color: var(--white-color);
+    color: var(--aqua-color);
 }
 .header-paragraph {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 500;
     color: var(--secondary-color);
     max-width: 70rem;
@@ -64,11 +64,12 @@ html {
 }
 .logo h1 {
     display: flex;
+    
 }
 .logo h1 span {
     font-size: 2rem;
     font-weight: 900;
-    color: var(--primary-color);
+    color: var(--aqua-color);
     text-transform: uppercase;
     background-color: var(--white-color);
     width: 3.5rem;
@@ -338,13 +339,14 @@ html {
     padding: 15rem 0 20rem 0;
     text-align: center;
     background: url('./images/contact-us-bg.png') center no-repeat;
+    animation: contact-bg 20s infinite;
 }
 .contact-heading {
     font-size: 7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .5rem;
-    color: var(--white-color);
+    color: var(--pink-color);
     text-shadow: 0 1rem 2rem black;
 }
 .contact-form {
@@ -392,6 +394,12 @@ html {
     transition: 1s;
 }
 
+.input-group input:focus::placeholder,
+.input-group textarea:focus::placeholder {
+    opacity: 0;
+    transition: 2s;
+}
+
 .input-group label {
     font-size: 1.2rem;
     font-weight: 600;
@@ -424,3 +432,22 @@ html {
     max-height: 15rem;
     min-height: 10rem;
 }
+
+@keyframes contact-bg{
+    0%{
+        background-color: gray;
+    }
+    25%{
+        background-color: #ced8e4;
+    }
+    50%{
+        background-color: rgb(79, 79, 230);
+    }
+    75%{
+        background-color: rgb(115, 18, 139);
+    }
+    100%{
+        background-color: gray;
+    }
+}
+/* end contact section  */
