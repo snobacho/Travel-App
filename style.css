@@ -9,6 +9,9 @@
 html {
     font-size: 62.5%; 
 }
+body {
+    background-color: var(--aqua-color);
+}
 :root {
     --primary-color: #2b81e4;
     --secondary-color: #eee;
@@ -18,7 +21,6 @@ html {
     --aqua-color: rgb(12, 177, 189);
     --aqua-light-color: rgb(32, 224, 224);
     --pink-color: rgb(229, 182, 223);
-
 }
 .center {
     display: flex;
@@ -28,13 +30,96 @@ html {
 ::selection {
     background-color: var(--aqua-color);
 }
-/*       ***                 end global styles  */
+/****    ********  end global styles  ********/
 .container {
     background-color: var(--secondary-color);
     margin: 3.5rem;
     box-shadow: 0 1rem 3rem var(--gray-color);
     overflow: hidden;
+    box-shadow: 0 3rem 4rem 4rem black;
+    border-radius: 5px;
 }
+
+/*  ************* navbar start  ************/
+.navbar-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    flex-direction: column;
+    display: grid;
+    place-items: center;
+}
+.open-navbar-inon{
+    position: fixed;
+    top: 6.5rem;
+    left: 6.5rem;
+    z-index: 200;
+}
+.navbar-icon .line {
+    height: 0.2rem;
+    width: 3.5rem;
+    background-color: var(--light-gray);
+}
+.open-navbar-inon .line {
+    margin:.3rem ;
+}
+.navbar-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .7);
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    z-index: 300;
+    padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, .3)), url("./images/navbar-bg.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.close-navbar-icon {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    z-index: 300;
+}
+.close-navbar-icon .line {
+    position: absolute;
+}
+.line-1 {
+    transform: rotate(-45deg);
+}
+.line-2 {
+    transform: rotate(45deg);
+}
+
+.nav-list {
+    height: 100%;
+    display: flex;
+}
+.nav-link {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white-color);
+    opacity: .7;
+    transition: all.3s;
+}
+.nav-link:hover {
+    opacity: 1;
+    /* color: var(--primary-color); */
+}
+
+
+
+/* ************* navbar end ****************/
 .header {
     width: 100%;
     height: calc(100vh - 7rem);
@@ -359,17 +444,23 @@ html {
     letter-spacing: .5rem;
     color: var(--pink-color);
     text-shadow: 0 1rem 2rem black;
+    display: inline;
+    color: var(--pink-color);
+    background-color: rgba(0, 0, 0, 0.7);
+    user-select: none;
+    border: .2rem solid var(--pink-color);
+    /* background: transparent; */
 }
 .contact-form {
     width: 70rem; 
     height: 50rem;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: auto;
     flex-direction: column;
     border-radius: .5rem;
-    box-shadow: 0 1rem 3rem var(--pink-color);
+    box-shadow: inset 0 1rem 3rem var(--pink-color);
     padding: 5rem;
-    border: .1rem solid var(--pink-color);
+    border: .2rem solid black;
 }
 .input-group {
     width: 100%;
@@ -426,7 +517,7 @@ html {
     padding: 1rem;
     font-size: 1.5rem;
     letter-spacing:  .1rem;
-    background-color: var(--pink-color);
+    background-color: var(--white-color);
     border: none;
     cursor: pointer;
     color: #000;
@@ -434,7 +525,8 @@ html {
     transition: background-color 0.4s linear;
 }
 .form-btn:hover {
-    background: pink;
+    background: var(--pink-color);
+    color: white;
 }
 .input-group textarea {
     max-width: 100%;
@@ -494,4 +586,5 @@ html {
     letter-spacing: .2rem;
     margin: 2rem 2rem;
     color: var(--aqua-color);
+    text-decoration: underline;
 }
