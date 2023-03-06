@@ -4,6 +4,7 @@
     box-sizing: border-box;
     outline: none;
     list-style: none;
+    text-decoration: none;
 } 
 html {
     font-size: 62.5%; 
@@ -14,8 +15,8 @@ html {
     --white-color: #fff;
     --gray-color: #555;
     --light-gray:#777;
-    --aqua-color: rgb(9, 185, 197);
-    --aqua-light-color: rgb(28, 172, 172);
+    --aqua-color: rgb(12, 177, 189);
+    --aqua-light-color: rgb(32, 224, 224);
     --pink-color: rgb(229, 182, 223);
 
 }
@@ -23,6 +24,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+::selection {
+    background-color: var(--aqua-color);
 }
 /*       ***                 end global styles  */
 .container {
@@ -43,11 +47,12 @@ html {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    text-shadow: 0 .3rem .5rem var(--gray-color);
 }
 .heading {
     font-size: 8rem;
     color: var(--aqua-color);
+    text-decoration: underline .7rem solid var(--aqua-color);
+
 }
 .header-paragraph {
     font-size: 2.8rem;
@@ -61,6 +66,7 @@ html {
     position: absolute;
     top: 4rem;
     right: 4rem;
+    user-select: none;
 }
 .logo h1 {
     display: flex;
@@ -120,6 +126,7 @@ html {
 }
 
 .header-image {
+    user-select: none;
     width: 35%;
     /* transform: translateZ(-400rem); */
     animation: header-img-size 400s infinite;
@@ -155,13 +162,15 @@ html {
 /* header end    ***************        *********    */
 .popular-tours {
     padding: 5rem 0 10rem;
+    background-color: rgb(227, 243, 243);
 }
 .popular-tours-heading {
-    font-size: 8rem;
+    font-size: 7rem;
     text-align: center;
     margin-bottom: 8rem;
-    color: var(--primary-color);
-    text-shadow: 0 .1rem .2re var(--primary-color);
+    color: var(--aqua-color);
+    text-shadow: 0 .1rem .2rem #000;
+    text-decoration: underline solid var(--aqua-color);
 }
 
 .cards-wrapper {
@@ -209,7 +218,7 @@ html {
 .card-list {
     width: 80%;
     margin: auto;
-    padding: 2rem 0 3rem 0;
+    padding: 1rem 0 1rem 0;
 }
 .card-list-item {
     font-size: 1.6rem;
@@ -224,7 +233,7 @@ html {
 .back-side {
     position: absolute;
     top: 0;
-    background-color: var(--primary-color);
+    background-color: var(--aqua-color);
     width: 100%;
     height: 100%;
     border-radius: .3rem;
@@ -308,6 +317,8 @@ html {
 .story {
     transform: skewX(-20deg);
     display: flex;
+    font-style: italic;
+
 }
 .story-image {
     width: 20rem;
@@ -326,8 +337,8 @@ html {
     margin-bottom: 1rem;
 }
 .story-paragraph {
-    font-size: 1.8rem;
-    color: var(--aqua-light-color);
+    font-size: 1.8rem ;
+    color: var(--pink-color);
 }
 .story-paragraph::first-letter {
     margin-left: 1rem;
@@ -339,7 +350,7 @@ html {
     padding: 15rem 0 20rem 0;
     text-align: center;
     background: url('./images/contact-us-bg.png') center no-repeat;
-    animation: contact-bg 20s infinite;
+    animation: contact-bg 30s infinite;
 }
 .contact-heading {
     font-size: 7rem;
@@ -397,7 +408,7 @@ html {
 .input-group input:focus::placeholder,
 .input-group textarea:focus::placeholder {
     opacity: 0;
-    transition: 2s;
+    transition: 1s;
 }
 
 .input-group label {
@@ -451,3 +462,36 @@ html {
     }
 }
 /* end contact section  */
+
+.footer {
+    background: black;
+    padding: 4rem 0 2rem 0;
+}
+.footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link {
+    font-size: 2rem;
+    background-color: rgb(30, 102, 98);
+    margin: 0 2rem;
+    padding: 0.3rem 3rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    font-weight: 999;
+}
+.footer-link:hover {
+    /* transform: rotate(-10deg); */
+    background-color: white;
+    color: var(--aqua-color);
+    transition: .3s;
+    box-shadow: 0 1rem 3rem var(--aqua-color);
+} 
+.footer-paragraph {
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    margin: 2rem 2rem;
+    color: var(--aqua-color);
+}
