@@ -5,12 +5,26 @@
     outline: none;
     list-style: none;
     text-decoration: none;
+    font-family:'Times New Roman', Times, serif;
 } 
 html {
     font-size: 62.5%; 
     scroll-behavior: smooth;
 }
 body {
+    background-color: var(--aqua-color);
+}
+::-webkit-scrollbar {
+    width: 16px;
+    box-shadow: inset 8px 0 rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(29, 28, 28);
+}
+::selection {
     background-color: var(--aqua-color);
 }
 :root {
@@ -28,11 +42,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-::selection {
-    background-color: var(--aqua-color);
-}
-
 /****    ********  end global styles  ********/
+
 .container {
     background-color: var(--secondary-color);
     margin: 3.5rem;
@@ -72,7 +83,7 @@ body {
 .navbar-wrapper {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     left: 0;
     bottom: -100%;
@@ -507,6 +518,7 @@ body {
     border-radius: .5rem;
     transition: border 3s;
 }
+
 
 .input-group input:focus::placeholder,
 .input-group textarea:focus::placeholder {
