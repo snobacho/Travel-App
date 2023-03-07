@@ -8,6 +8,7 @@
 } 
 html {
     font-size: 62.5%; 
+    scroll-behavior: smooth;
 }
 body {
     background-color: var(--aqua-color);
@@ -30,6 +31,7 @@ body {
 ::selection {
     background-color: var(--aqua-color);
 }
+
 /****    ********  end global styles  ********/
 .container {
     background-color: var(--secondary-color);
@@ -380,8 +382,8 @@ body {
     top: 0.5rem;
     left: 0.5rem;
     padding: 0.5rem;
-    background-color: rgba(red, green, blue, .8);
-    color: black;
+    background-color: black;
+    color: var(--aqua-color);
     border-radius: .3rem;
     border: none;
     font-size: 1.5rem;
@@ -459,7 +461,7 @@ body {
     animation: contact-bg 30s infinite;
 }
 .contact-heading {
-    font-size: 7rem;
+    font-size: 6.5rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .5rem;
@@ -512,7 +514,7 @@ body {
     transition: 1s;
 }
 .input-group label {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -555,7 +557,7 @@ body {
         background-color: rgb(123, 126, 124);
     }
     25%{
-        background-color: gray;
+        background-color: rgb(194, 168, 168);
     }
     50%{
         background-color: rgb(59, 61, 63);
@@ -564,7 +566,7 @@ body {
         background-color: rgb(29, 28, 29);
     }
     100%{
-        background-color: rgb(29, 24, 24);
+        background-color: rgb(123, 126, 124);
     }
 }
 /* end contact section  */
@@ -585,10 +587,10 @@ body {
     padding: 0.3rem 3rem;
     color: var(--white-color);
     border-radius: .5rem;
-    font-weight: 999;
+    font-weight: 700;
 }
 .footer-link:hover {
-    background-color: white;
+    background-color: rgb(255, 241, 241);
     color: var(--aqua-color);
     transition: .3s;
     box-shadow: 0 1rem 3rem var(--aqua-color);
@@ -597,7 +599,7 @@ body {
     text-align: center;
     font-size: 1.4rem;
     letter-spacing: .2rem;
-    margin: 2rem 2rem;
+    margin: 3rem;
     color: var(--aqua-color);
     text-decoration: underline;
 }
