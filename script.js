@@ -1,13 +1,14 @@
 const container = document.querySelector('.container')
 
-// document.querySelector('.open-navbar').addEventListener('click', () => {
-//     container.classList.add('change')
-// })
-// document.querySelector('.close-navbar').addEventListener('click', () => {
-//     container.classList.remove('change')
-// })
+document.querySelector('.open-navbar-inon').addEventListener('click', function() {
+    container.classList.add('change')
+})
+document.querySelector('.close-navbar-icon').addEventListener('click', function() {
+    container.classList.remove('change')
+})
 
-const colors = ['#6495ed', '#7fffd4','#6495ed','#7fffd4', '#6495ed' ]
+
+const colors = ['#000B0B', '#065E64','#000B0B','#065E64', '#080500' ]
 
 let i = 0
 
